@@ -20,11 +20,15 @@ def main():
         if frame is None:
             break
 
-        # Track hands in the frame and get processed frame
-        processed_frame = hand_tracker.track_hands(frame)
+        # Track hands in the frame and get processed frame with gestures
+        processed_frame, detected_gestures = hand_tracker.track_hands(frame)
 
-        # Display the frame with hand landmarks and bounding boxes
-        cv2.imshow("Hand Tracking", processed_frame)
+        # Print detected gestures to console
+        # if detected_gestures:
+        #     print(f"Detected gestures: {', '.join(detected_gestures)}")
+
+        # Display the frame with hand landmarks and gesture labels
+        cv2.imshow("Hand Tracking with Gestures", processed_frame)
 
         # Break the loop on 'q' key press
         if cv2.waitKey(1) & 0xFF == ord('q'):

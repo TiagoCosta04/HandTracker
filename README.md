@@ -43,11 +43,3 @@ hand-tracking-app
 ## Usage
 
 Once the application is running, it will open a window displaying the camera feed with hand tracking overlays. You can use your hands to interact with the application.
-
-## Contributing
-
-Feel free to submit issues or pull requests if you have suggestions or improvements for the project.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
